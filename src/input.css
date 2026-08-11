@@ -1,0 +1,7 @@
+@layer base-pico, theme, utilities;
+@import '@picocss/pico/css/pico.min.css' layer(base-pico);
+@import 'tailwindcss/theme.css' layer(theme);
+@theme {
+	--container-center: true;
+}
+@import 'tailwindcss/utilities.css' layer(utilities);
