@@ -1,4 +1,13 @@
 ---
+const pageTitle = 'About Me';
+const identity = {
+	name: 'David',
+	role: 'Web Developer',
+	bio: 'I am a web developer with a passion',
+	hobbies: ['coding', 'reading', 'gaming']
+}
+const skills = ["HTML", "CSS", "JavaScript",  "Astro", "Writing Docs"];
+
 
 ---
 
@@ -9,7 +18,7 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 		<link rel="stylesheet" href="../src/output.css" />
 	</head>
 	<body>
@@ -25,9 +34,22 @@
 		</nav>
 		</header>
     <main class="container p-10">
-		<h1>About Me</h1>
+		<h1>{pageTitle}</h1>
     <small>...and my new blog</small>
     <p>I'm working through Astro's Tutorial to build this site. I'm also using  a hybrid  Pico/Tailwind CSS approach.</p>
+		 <p>Here are a few things about me</p>
+		 	<ul>
+				<li><strong>Name:</strong> {identity.name}</li>
+				<li><strong>Role:</strong> {identity.role}</li>
+				<li><strong>Bio:</strong> {identity.bio}</li>
+				<li><strong>Hobbies:</strong> {identity.hobbies.join(', ')}</li>
+			</ul>
+			<p>And some of my skills are:</p>
+			
+			<ul>
+				{skills.map((skill) => (
+				<li>{skill}</li>))}
+				</ul>
     </main>
 	</body>
 </html>

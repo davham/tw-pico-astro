@@ -1,5 +1,5 @@
 ---
-
+const pageTitle = 'Blog';
 ---
 
 <html lang="en">
@@ -9,7 +9,7 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 		<link rel="stylesheet" href="../src/output.css" />
 	</head>
 	<body>
@@ -25,9 +25,15 @@
 		</nav>
 		</header>
     <main class="container p-10">
-		<h1>Blog</h1>
+		<h1>{pageTitle}</h1>
     <small>...and my new blog</small>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta hic magni numquam placeat aliquam vero quas repellendus fugit accusantium fugiat, corrupti nobis adipisci rerum, repellat aspernatur aut voluptates in quibusdam?</p>
+    
+         <ul>
+					<li>
+						<article ><a href="/posts/post-1/">Post 1</a></article></li>
+					<li><article ><a href="/posts/post-2/">Post 2</a></article></li>
+					<li><article ><a href="/posts/post-3/">Post 3</a></article></li>
+    </ul>
     </main>
 	</body>
 </html>
